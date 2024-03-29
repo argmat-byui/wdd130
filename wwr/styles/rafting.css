@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #2C3E50;
-    --secondary-color: #3498DB;
+    --secondary-color: #2477af;
     --accent1-color: #E74C3C;
     --accent2-color: #F39C12;
 
@@ -10,15 +10,56 @@
     --paragraph-font: 'Roboto', serif;
 
     --nav-background-color: #2C3E50;
-    --nav-link-color: #3498DB;
+    --nav-link-color: #2477af;
     --nav-hover-link-color: #E74C3C;
     --nav-hover-background-color: #F39C12;
+}
+
+header {
+    display: grid;
+	grid-template-columns: 100px 1fr;
+	align-items: center;
+}
+
+header img {
+    width: 64px;
+    height: auto;
 }
 
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
     padding: 20px;
+}
+
+section.history div {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    align-items: center;
+}
+
+section.history img {
+    width: 300px;
+    align-items: center;
+}
+
+section.adventure div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+section.adventure img {
+    /* width: 300px; */
+    height: 80px;
+}
+
+section.adventure figure {
+    margin: 10px;
+    padding: 0;
+}
+
+section h2 {
+    text-align: center;
 }
 
 h1,
@@ -28,7 +69,7 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
-    color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 p {
@@ -50,10 +91,17 @@ nav a {
 
 footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    flex-grow: 1;
 }
 
 footer nav img {
-    width: 50px;
+    width: 30px;
 }
 
 .hero {
