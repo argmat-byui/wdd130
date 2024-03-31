@@ -13,6 +13,8 @@
     --nav-link-color: #2477af;
     --nav-hover-link-color: #E74C3C;
     --nav-hover-background-color: #F39C12;
+
+    --background-color: 230, 230, 230;
 }
 
 header {
@@ -32,15 +34,20 @@ body {
     padding: 20px;
 }
 
-section.history div {
+section.history div, section.our-team div {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
     align-items: center;
 }
 
-section.history img {
-    width: 300px;
+section.history img, section.our-team img {
+    width: 200px;
     align-items: center;
+}
+
+section.our-team img {
+    height: 150px;
+    width: auto;
 }
 
 section.adventure div {
@@ -58,7 +65,7 @@ section.adventure figure {
     padding: 0;
 }
 
-section h2 {
+main h1, section h2 {
     text-align: center;
 }
 
@@ -146,4 +153,58 @@ footer nav img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.contact-detail {
+    padding: 0;
+}
+
+.contact-detail svg {
+    height: 20px;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(var(--background-color), 0.5);
+    padding: 10px 25px;
+    margin-bottom: 50px;
+}
+
+section.form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+section.form label {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+section.form label.radio-label {
+    margin: 0;
+}
+
+section.form input, section.form textarea, section.form button {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+section.form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+section.form button:hover {
+    background-color: #0056b3;
+}
+
+iframe {
+    width: 100%;
 }
