@@ -104,7 +104,7 @@ section.adventure img {
     height: 80px;
 }
 
-section.best-trips {
+section.best-trips, body.home-body section.adventure {
     overflow-x: auto;    
 }
 
@@ -125,7 +125,8 @@ body.home-body section.adventure div.figure-container, section.best-trips div.fi
 }
 
 body.home-body section.adventure img {
-    height: 500px;
+    height: auto;
+    max-width: 500px;
 }
 
 section.adventure figure {
