@@ -30,14 +30,54 @@ header img {
 
 body {
     font-family: var(--paragraph-font);
-    max-width: 960px;
+    max-width: 80%;
     padding: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-section.history div, section.our-team div {
+body.home-body {
+    max-width: 100%;
+    padding: 20px 0;
+}
+
+body.home-body header {
+    margin-left: 10%;
+}
+
+.home-body .hero {
+    height: 800px;
+    overflow: hidden;
+}
+
+.home-body .hero img {
+    margin-top: -300px;
+}
+
+
+body.home-body .main-container, body.home-body footer {
+    max-width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-container {
+    margin-top: 100px;
+}
+
+section.history div.container, section.our-team div {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
     align-items: center;
+    text-align: center;
+}
+
+figure.center, div.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 section.history img, section.our-team img {
@@ -55,14 +95,68 @@ section.adventure div {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+section.best-trips div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 section.adventure img {
-    /* width: 300px; */
     height: 80px;
+}
+
+section.best-trips {
+    overflow-x: auto;    
+}
+
+section.best-trips img {
+    height: 200px;
+}
+
+body.home-body section.adventure div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+body.home-body section.adventure div.figure-container, section.best-trips div.figure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body.home-body section.adventure img {
+    height: 500px;
 }
 
 section.adventure figure {
     margin: 10px;
     padding: 0;
+}
+
+section.table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #bbb;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+th {
+    background-color: #ddd;
+    font-weight: bold;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 main h1, section h2 {
@@ -113,6 +207,8 @@ footer nav img {
 
 .hero {
     position: relative;
+    height: 800px;
+    overflow: hidden;
 }
 
 .hero h1 {
@@ -139,6 +235,7 @@ footer nav img {
 .hero article img {
     float: right;
     width: 150px;
+    margin-top: 0;
 }
 
 .hero article p {
@@ -153,13 +250,14 @@ footer nav img {
     display: block;
     width: 100%;
     height: auto;
+    margin-top: -300px;
 }
 
 .contact-detail {
     padding: 0;
 }
 
-.contact-detail svg {
+.contact-detail svg, svg.location {
     height: 20px;
 }
 
@@ -176,6 +274,7 @@ section.form form {
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
+    text-align: left;
 }
 
 section.form label {
@@ -187,24 +286,64 @@ section.form label.radio-label {
     margin: 0;
 }
 
-section.form input, section.form textarea, section.form button {
+section.form input, section.form textarea, button {
     padding: 5px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-section.form button {
+button {
     background-color: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
 }
 
-section.form button:hover {
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+section.trips .button {
+    padding: 15px;
+}
+
+button:hover {
     background-color: #0056b3;
 }
 
 iframe {
     width: 100%;
 }
+
+/* div.figure-container > div {
+    margin: 20px;
+    text-align: center;
+} */
+
+/* div.figure-container figure {
+    margin: 0;
+}
+
+div.figure-container figcaption {
+    margin-top: 10px;
+}
+
+div.figure-container p {
+    margin-top: 10px;
+} */
